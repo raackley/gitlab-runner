@@ -1,2 +1,2 @@
 # gitlab-runner
-A gitlab runner for personal use
+Builds a docker image for local use of a gitlab-runner
