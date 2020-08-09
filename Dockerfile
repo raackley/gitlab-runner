@@ -9,8 +9,9 @@ RUN apt-get update && apt-get -y dist-upgrade
 RUN apt-get -y install unzip curl ansible
 
 ## Install terraform
-ADD https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip /
-RUN unzip /terraform_0.12.28_linux_amd64.zip -d /usr/bin/
+ENV TERRAFORM_VERSION 0.12.29
+ADD https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip /
+RUN unzip /terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/local/bin/
 
 ## Install kubectl
 ENV KUBECTL_VERSION v1.18.6
@@ -24,5 +25,7 @@ RUN /get_helm.sh
 
 ## Cleanup
 RUN apt-get -y autoremove
-RUN rm /terraform_0.12.28_linux_amd64.zip
+RUN apt-get clean
+RUN apt-get autoclean
+RUN rm /terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 RUN rm /get_helm.sh

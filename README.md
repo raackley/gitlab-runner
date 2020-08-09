@@ -8,6 +8,6 @@ Extra tools installed:
 * unzip
 * curl
 * Ansible
-* Terraform v0.12.28
+* Terraform v0.12.29
 * kubectl v1.18.6
 * Helm 3
