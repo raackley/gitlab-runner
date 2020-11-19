@@ -14,7 +14,7 @@ ADD https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TE
 RUN unzip /terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/local/bin/
 
 ## Install kubectl
-ENV KUBECTL_VERSION v1.18.6
+ENV KUBECTL_VERSION v1.19.4
 ADD https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl /usr/local/bin/
 RUN chmod +x /usr/local/bin/kubectl
 
