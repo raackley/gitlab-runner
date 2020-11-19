@@ -9,7 +9,7 @@ RUN apt-get update && apt-get -y dist-upgrade
 RUN apt-get -y install unzip curl ansible
 
 ## Install terraform
-ENV TERRAFORM_VERSION 0.12.29
+ENV TERRAFORM_VERSION 0.13.5
 ADD https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip /
 RUN unzip /terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/local/bin/
 
