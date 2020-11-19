@@ -20,12 +20,11 @@ RUN chmod +x /usr/local/bin/kubectl
 
 ## Install Helm
 ADD https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 /get_helm.sh
-RUN chmod 700 /get_helm.sh
-RUN /get_helm.sh
+RUN chmod 700 /get_helm.sh && /get_helm.sh
 
 ## Cleanup
-RUN apt-get -y autoremove
-RUN apt-get clean
-RUN apt-get autoclean
-RUN rm /terraform_${TERRAFORM_VERSION}_linux_amd64.zip
-RUN rm /get_helm.sh
+RUN apt-get -y autoremove && \
+    apt-get clean && \
+    apt-get autoclean && \
+    rm /terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
+    rm /get_helm.sh
