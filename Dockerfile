@@ -6,7 +6,7 @@ LABEL maintainer="raackley@protonmail.com"
 RUN apt-get update && apt-get -y dist-upgrade
 
 ## Install tools
-RUN apt-get -y install unzip curl ansible
+RUN apt-get -y install unzip curl ansible flake8
 
 ## Install terraform
 ENV TERRAFORM_VERSION 0.13.5
