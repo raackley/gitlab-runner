@@ -11,3 +11,4 @@ Extra tools installed:
 * Terraform v0.13.5
 * kubectl v1.19.4
 * Helm 3
+* flake8
