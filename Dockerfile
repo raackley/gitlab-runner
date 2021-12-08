@@ -21,8 +21,3 @@ ADD https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 /get_h
 RUN chmod 700 /get_helm.sh && \
     /get_helm.sh && \
     rm /get_helm.sh
-
-## Cleanup
-RUN apt-get -y autoremove && \
-    apt-get clean && \
-    apt-get autoclean
