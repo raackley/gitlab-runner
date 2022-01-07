@@ -6,7 +6,7 @@ LABEL maintainer="raackley@protonmail.com"
 RUN apt-get update && apt-get -y install unzip curl ansible flake8
 
 ## Install terraform
-ENV TERRAFORM_VERSION 1.0.11
+ENV TERRAFORM_VERSION 1.1.3
 ADD https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip /
 RUN unzip /terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/local/bin/ && \
     rm /terraform_${TERRAFORM_VERSION}_linux_amd64.zip
