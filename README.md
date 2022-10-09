@@ -8,7 +8,7 @@ Extra tools installed:
 * unzip
 * curl
 * Ansible
-* Terraform v1.1.3
-* kubectl v1.23.7
+* Terraform v1.3.2
+* kubectl v1.24.6
 * Helm 3
 * flake8
