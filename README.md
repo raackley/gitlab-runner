@@ -1,7 +1,7 @@
 # gitlab-runner
 Builds a docker image for local use of a gitlab-runner
 
-This is an Ubuntu 20.04 LTS Focal base image with extra tools installed.
+This is an Ubuntu 22.04 LTS Jammy base image with extra tools installed.
 
 Extra tools installed:
 
