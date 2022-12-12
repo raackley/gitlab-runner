@@ -2,10 +2,8 @@ FROM ubuntu:22.04
 
 LABEL maintainer="raackley@protonmail.com"
 
-ENV DEBIAN_FRONTEND=noninteractive
-
 ## Install tools
-RUN apt-get update && apt-get -y install unzip curl ansible flake8 git
+RUN apt-get update && apt-get -y install unzip curl ansible flake8
 
 ## Install terraform
 ENV TERRAFORM_VERSION 1.3.2
@@ -23,6 +21,3 @@ ADD https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 /get_h
 RUN chmod 700 /get_helm.sh && \
     /get_helm.sh && \
     rm /get_helm.sh
-
-## Install chartmuseum helm-push plugin
-RUN helm plugin install https://github.com/chartmuseum/helm-push
