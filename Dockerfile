@@ -6,13 +6,13 @@ LABEL maintainer="raackley@protonmail.com"
 RUN apt-get update && apt-get -y install unzip curl ansible flake8
 
 ## Install terraform
-ENV TERRAFORM_VERSION 1.3.2
+ENV TERRAFORM_VERSION 1.4.6
 ADD https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip /
 RUN unzip /terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/local/bin/ && \
     rm /terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 
 ## Install kubectl
-ENV KUBECTL_VERSION v1.24.6
+ENV KUBECTL_VERSION v1.25.10
 ADD https://dl.k8s.io/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl /usr/local/bin/
 RUN chmod +x /usr/local/bin/kubectl
 
