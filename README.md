@@ -1,7 +1,7 @@
 # gitlab-runner
 Builds a docker image for local use of a gitlab-runner
 
-This is an Ubuntu 22.04 LTS Jammy base image with extra tools installed.
+This is an Ubuntu 24.04 LTS base image with extra tools installed.
 
 Extra tools installed:
 
@@ -9,6 +9,8 @@ Extra tools installed:
 * curl
 * Ansible
 * Terraform v1.5.7
-* kubectl v1.31.8
+* kubectl v1.32.5
 * Helm 3
 * flake8
+* gettext
+* moreutils
