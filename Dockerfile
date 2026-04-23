@@ -13,12 +13,12 @@ RUN unzip /terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/local/bin/ && 
     rm /terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 
 ## Install kubectl
-ENV KUBECTL_VERSION v1.34.1
+ENV KUBECTL_VERSION v1.35.3
 ADD https://dl.k8s.io/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl /usr/local/bin/
 RUN chmod +x /usr/local/bin/kubectl
 
 ## Install Helm
-ADD https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 /get_helm.sh
+ADD https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-4 /get_helm.sh
 RUN chmod 700 /get_helm.sh && \
     /get_helm.sh && \
     rm /get_helm.sh
