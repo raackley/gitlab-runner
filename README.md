@@ -9,8 +9,8 @@ Extra tools installed:
 * curl
 * Ansible
 * Terraform v1.5.7
-* kubectl v1.34.1
-* Helm 3
+* kubectl v1.35.3
+* Helm 4
 * flake8
 * gettext
 * moreutils
