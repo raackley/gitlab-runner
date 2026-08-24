@@ -9,12 +9,15 @@ stages:
 include:
   - template: Container-Scanning.gitlab-ci.yml
 
+
 .build:
-  image: docker:24.0.6
+  image: docker:29.7.2
   stage: build
   services:
-    - name: docker:24.0.6-dind
+    - name: docker:29.7.2-dind
       alias: docker
+      command:
+        - "--mtu=1360"
   script:
     - docker info
     - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD $DOCKER_REGISTRY
